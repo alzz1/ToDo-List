@@ -1,3 +1,10 @@
+package service;
+
+import Model.Priority;
+import Model.Status;
+import Model.Task;
+import repository.TaskRepository;
+
 import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;

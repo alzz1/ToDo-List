@@ -1,3 +1,8 @@
+package repository;
+
+import Model.Status;
+import Model.Task;
+
 import java.util.List;
 
 public interface TaskRepository {

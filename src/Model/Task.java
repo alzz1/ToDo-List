@@ -1,3 +1,8 @@
+package Model;
+
+import Model.Priority;
+import Model.Status;
+
 import java.time.LocalDate;
 
 public class Task {
@@ -12,8 +17,14 @@ public class Task {
         this.id = id;
         this.title = title;
         this.description = description;
+        this.priority = priority;
         this.status = status;
         this.createdAt = createdAt;
+    }
+
+    public boolean isOverdue() {
+        return this.status != Status.DONE &&
+                this.createdAt.isBefore(LocalDate.now().minusDays(7));
     }
 
     public int getId() {
